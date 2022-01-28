@@ -23,7 +23,7 @@ jobs:
       run: docker-compose version
       shell: bash
     - name: Run the Docker image to build container
-      run: docker-compose -f docker-compose-dev.yml up -d --build
+      run: docker-compose -f docker-compose-dev.yml up
       shell: bash
-    - name: Test port 3000
-      run: curl -v localhost:3000
+    - name: Test 
+      run: docker ps 
