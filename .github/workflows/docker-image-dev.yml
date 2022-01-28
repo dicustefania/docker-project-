@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: React app for DEV 
 
 #on:
 #  push:
@@ -22,8 +22,14 @@ jobs:
     - name: test docker compose
       run: docker-compose version
       shell: bash
-    - name: Run the Docker image to build container
+    - name: Docker compose UP 
       run: docker-compose -f docker-compose-dev.yml up -d
       shell: bash
-    - name: Test 
-      run: docker ps 
+    - name: Test 1
+      run: |
+        docker ps
+        sleep 60
+    - name: Test2
+      run: curl -v localhost:3000 
+    - name: Test3
+      run: docker ps  
