@@ -10,6 +10,7 @@ services:
 script:
 #  - docker run -e CI=true stephengrider/docker-react npm run test
    - docker-compose up -f docker-compose-dev.yml --build -d
+   - docker ps 
 deploy:
   provider: elasticbeanstalk
   region: 'us-east-1'
