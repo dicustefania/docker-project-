@@ -19,5 +19,5 @@ jobs:
       run: docker build . --file Dockerfile.dev --tag react_app_dev:latest
       shell: bash
 #      run: echo $pwd
-    - name: Run the Docker imageto build container
-      run: docker run react_app_dev npm run test 
+    - name: Run the Docker image to build container
+      run: docker-compose up docker-compose-dev.yml
