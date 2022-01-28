@@ -16,6 +16,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile.dev --tag react_app_dev:$(date +%s)
+      run: docker build . --file Dockerfile.dev --tag react_app_dev:latest
       shell: bash
 #      run: echo $pwd
+    - name: Run the Docker imageto build container
+      run: docker run react_app_dev npm run test 
