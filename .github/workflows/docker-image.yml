@@ -15,11 +15,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile.dev --tag react_app_dev:latest
-      shell: bash
+#    - name: Build the Docker image
+#      run: docker build . --file Dockerfile.dev --tag react_app_dev:latest
+#      shell: bash
 #      run: echo $pwd
     - name: Run the Docker image to build container
-      run: docker-compose -f docker-compose-dev.yml up
+      run: docker-compose -f docker-compose-dev.yml up -d
     - name: Test port 3000
       run: curl -v localhost:3000
