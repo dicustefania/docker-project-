@@ -16,4 +16,5 @@ jobs:
     steps:
 #    - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile.dev --tag react_app_dev:$(date +%s)
+#      run: docker build . --file Dockerfile.dev --tag react_app_dev:$(date +%s)
+       run: echo hi 
