@@ -18,6 +18,4 @@ jobs:
     - name: Build the Docker image
 #      run: docker build . --file Dockerfile.dev --tag react_app_dev:$(date +%s)
       shell: bash
-      run: |
-        docker version
-        ls -l ./
+      run: echo $pwd
