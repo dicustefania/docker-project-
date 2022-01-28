@@ -17,5 +17,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag react_app_dev:$(date +%s)
-#      shell: bash
+      shell: bash
 #      run: echo $pwd
