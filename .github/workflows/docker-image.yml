@@ -1,0 +1,19 @@
+name: Docker Image CI
+
+#on:
+#  push:
+#    branches: [ master ]
+#  pull_request:
+#    branches: [ master ]
+on:
+  workflow_dispatch:
+jobs:
+
+  build:
+
+#    runs-on: ubuntu-latest
+    runs-on: windows-2019
+    steps:
+#    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile.dev --tag react_app_dev:$(date +%s)
