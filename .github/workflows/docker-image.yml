@@ -20,4 +20,4 @@ jobs:
       shell: bash
 #      run: echo $pwd
     - name: Run the Docker image to build container
-      run: docker-compose up docker-compose-dev.yml
+      run: docker-compose docker-compose-dev.yml up
