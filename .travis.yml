@@ -9,8 +9,8 @@ before_install:
 
 script:
   - docker run -e CI=true stefania/docker-react npm run test 
-#   - docker-compose up -f docker-compose-dev.yml --build -d
-   - docker ps 
+  - docker ps
+  - curl -v localhost:3000
 deploy:
   provider: elasticbeanstalk
   region: 'us-east-1'
